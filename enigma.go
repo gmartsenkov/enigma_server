@@ -31,7 +31,7 @@ var MainChannel = Channel{}
 func main() {
 	http.HandleFunc("/message", messageHandler)
 	http.HandleFunc("/subscribe", subscribeHandler)
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 	if err != nil {
 		panic("ListenAndServe: " + err.Error())
 	}
