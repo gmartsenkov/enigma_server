@@ -1,1 +1,1 @@
-web: enigma
+web: enigma_server
